@@ -38,7 +38,7 @@
     <div class="container">
   <div class="py-5 text-center">
     <h2>Calculator</h2>
-    <p class="lead">Calculate how much you need to save each month</p>
+    <p class="lead" id="report">Calculate how much you need to save each month</p>
   </div>
 
   <div class="row">
@@ -47,40 +47,45 @@
       <form class="needs-validation" novalidate>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="currentAge">Current Age</label>
-            <input type="number" class="form-control" id="currentAge" placeholder="25" value="25" required>
-            <div class="invalid-feedback">
-              Valid age is required.
+            <div class="mb-3">
+              <label for="annualIncome">Annual Income</label>
+              <input type="number" id="annualIncome" class="form-control" value="45000" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Please enter a valid income.
+              </div>
             </div>
           </div>
         </div>
 
         <div class="mb-3">
-          <label for="retireAge">Retirement Age</label>
-          <input type="number" class="form-control" id="retireAge" placeholder="65" value="65" required>
+          <label for="retireAge">Expected Retirement Age</label>
+          <input type="number" class="form-control" id="retireAge" value="65" required>
           <div class="invalid-feedback">
             Please enter a valid age.
           </div>
         </div>
 
-        <div class="mb-3">
-          <label for="annualIncome">Annual Income</label>
-          <input type="number" id="annualIncome" class="form-control" placeholder="45000" value="45000" required>
-          <div class="invalid-feedback" style="width: 100%;">
-            Please enter a valid income.
-          </div>
+        <label for="currentAge">Current Age</label>
+        <input type="number" class="form-control" id="currentAge" value="25" required>
+        <div class="invalid-feedback">
+          Valid age is required.
         </div>
 
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Calculate</button>
+
       </form>
+      <button class="btn btn-primary btn-lg btn-block" id="submit">Calculate</button>
     </div>
   </div>
 
   <footer class="my-5 pt-5 text-muted text-center text-small">
   </footer>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="form-validation.js"></script></body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write(
+        '<script src="assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="calculator.js"></script></body>
 </html>

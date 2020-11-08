@@ -46,6 +46,7 @@ function inputValidation (currentAge, retireAge, annualIncome) {
 }
 
 $(() => {
+  console.log('load')
   $('#submit').on('click', () => {
     $('#report').text('');
     const currentAge = $('#currentAge').val();
